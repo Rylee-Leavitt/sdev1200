@@ -54,4 +54,4 @@ def main():
             break
 
 if __name__ == "__main__": #ensures that a block of code is only run when the script is executed directly
-    main()
+    main() #calss the main function
