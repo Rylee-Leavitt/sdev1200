@@ -17,9 +17,18 @@ def get_computer_choice(): #Defines the function get_computer_choice; no paramet
     return random.choice(choices) 
     # select a random choice from the list and returns it as the computer's choice.
 
-def determine_winner(user_choice, computer_choice):
-    if user_choice == computer_choice:
-        return "It's a tie! Play again to determine the winner."
+def determine_winner(user_choice, computer_choice): 
+    if user_choice == computer_choice: # Compares the user's choice and the computer's choice.
+        # user_choice == computer_choice print its a tie
+        return "It's a tie! Play again to determine the winner." 
+
+        # if user_choice != computer_choice
+        #if user_choice == 'rock' and computer_choice == 'scissors'
+        #or user_choice == 'scissors' and computer_choice == 'paper' or
+        #user_choice == 'paper' and computer_choice == 'rock'
+        #return You win!
+        # otherwise return You lose!
+
     elif (user_choice == 'rock' and computer_choice == 'scissors') or \
          (user_choice == 'scissors' and computer_choice == 'paper') or \
          (user_choice == 'paper' and computer_choice == 'rock'):
