@@ -36,19 +36,22 @@ def determine_winner(user_choice, computer_choice):
     else:
         return f"You lose! {computer_choice.capitalize()} beats {user_choice}."
 
+    #Main unction
 def main():
-    print("Welcome to Rock, Paper, Scissors!")
+    print("Welcome to Rock, Paper, Scissors!") #prints Greeting
     while True:
-        user_choice = input("Enter your choice (rock, paper, or scissors): ").lower()
-        if user_choice not in ['rock', 'paper', 'scissors']:
+        user_choice = input("Enter your choice (rock, paper, or scissors): ").lower() 
+        # .lower converts all the characters in a string to lowercase
+
+        if user_choice not in ['rock', 'paper', 'scissors']: #ivalid input handler/error
             print("Invalid choice. Please enter 'rock', 'paper', or 'scissors'.")
             continue
         computer_choice = get_computer_choice()
-        print(f"The computer chose: {computer_choice}")
-        result = determine_winner(user_choice, computer_choice)
-        print(result)
+        print(f"The computer chose: {computer_choice}") #Print the computers choice
+        result = determine_winner(user_choice, computer_choice) # game results
+        print(result) #displays the game results
         if "tie" not in result:
             break
 
-if __name__ == "__main__":
+if __name__ == "__main__": #ensures that a block of code is only run when the script is executed directly
     main()
