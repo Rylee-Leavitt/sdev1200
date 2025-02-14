@@ -7,10 +7,10 @@
 
 # Use comments liberally throughout the program. 
 
-class Pet: #defines a new class named Pet
+class pet: #defines a new class named pet
 
     def __init__(self, name, animal_type, age): 
-        #Function to initialize the pet's attributes
+        #function to initialize the pet's attributes
         self.__name = name                  #initializes the pet's name
         self.__animal_type = animal_type    #initializes the pet's type
         self.__age = age                    #initializes the pet's age
@@ -44,7 +44,7 @@ def main():
     pet_age = input("Enter the age of your pet: ")
 
     # Create a Pet object with the provided information
-    pet = Pet(pet_name, pet_type, pet_age)
+    pet = pet(pet_name, pet_type, pet_age)
 
     # Display the pet's information using the accessor methods
     print(f"\nHere is the information about your pet:")
