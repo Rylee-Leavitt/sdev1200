@@ -44,7 +44,7 @@ def main():
     pet_age = input("Enter the age of your pet: ")
 
     # Create a Pet object with the provided information
-    pet = pet(pet_name, pet_type, pet_age)
+    pet =(pet_name, pet_type, pet_age)
 
     # Display the pet's information using the accessor methods
     print(f"\nHere is the information about your pet:")
