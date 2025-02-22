@@ -7,8 +7,6 @@
 
 # Use comments liberally throughout the program. 
 
-import pet
-
 def main():
     # Function to prompt the user for pet information
     pet_name = input("Enter the name of your pet: ") #asks user for pet name
