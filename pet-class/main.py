@@ -6,6 +6,8 @@
 #
 
 # Use comments liberally throughout the program.
+import pet
+
 class Pet:
     # Defines a new class named Pet
 
