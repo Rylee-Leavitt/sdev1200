@@ -19,4 +19,5 @@ def main():
     # Display information.
 
 # Call the main function.
-main()
+if __name__ == "__main__":
+    main()
