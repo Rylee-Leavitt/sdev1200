@@ -9,15 +9,21 @@
 
 import person
 
+# Main function
 def main():
-    # Local variables
+    # Get data attributes from the user
+    name = input("Enter the customer's name: ")
+    address = input("Enter the customer's address: ")
+    telephone = input("Enter the customer's telephone number: ")
+    customer_number = input("Enter the customer's number: ")
+    on_mailing_list = input("Is the customer on the mailing list? (yes/no): ").lower() == 'yes'
 
-    # Get data attributes.
+    # Create an instance of Customer
+    customer = Customer(name, address, telephone, customer_number, on_mailing_list)
+    
+    # Display information
+    print(customer.display())
 
-    # Create an instance of Customer.
-
-    # Display information.
-
-# Call the main function.
+# Call the main function
 if __name__ == "__main__":
     main()

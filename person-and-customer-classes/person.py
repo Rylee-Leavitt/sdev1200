@@ -7,9 +7,10 @@
 
 # Use comments liberally throughout the program.
 
+# Define the Person class
 class Person:
-    # Define the Person class
     def __init__(self, name, address, telephone):
+        self.name, address, and telephone
         self.name = name
         self.address = address
         self.telephone = telephone
@@ -17,8 +18,8 @@ class Person:
     def display(self):
         return f"Name: {self.name}\nAddress: {self.address}\nTelephone: {self.telephone}"
 
+# Define the Customer class as a subclass of Person
 class Customer(Person):
-    # Define the Customer class as a subclass of Person
     def __init__(self, name, address, telephone, customer_number, on_mailing_list):
         super().__init__(name, address, telephone)
         self.customer_number = customer_number
