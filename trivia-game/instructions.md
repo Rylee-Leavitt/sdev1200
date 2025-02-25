@@ -14,4 +14,4 @@ To create this program, write a `Question` class to hold the data for a trivia q
 
 The Question class also should have an appropriate `__init__` method, accessors, and mutators.
 
-The program should have a list or a dictionary containing 10 `Question` objects, one for each trivia question. This file has been provided in this Repl for you convienence. 
+The program should have a list or a dictionary containing 10 `Question` objects, one for each trivia question. This file has been provided in this Reply for you convienence. 
