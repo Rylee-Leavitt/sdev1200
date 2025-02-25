@@ -5,59 +5,69 @@
 # SDEV 1200
 #
 
-# questions.py
+# game_Questions.py
 
 class Question:
     def __init__(self, question, ans1, ans2, ans3, ans4, correct_ans):
         #__init__ initializes the attributes of the Question object with the provided values.
         
         self.question = question
+        #takes the value provided when the instance is created & assigns it to the instance variable question
+
         self.ans1 = ans1
+        #assigns the value of the parameter ans1 to the instance variable ans1
+
         self.ans2 = ans2
+        #assigns the value of the parameter ans2 to the instance variable ans2
+
         self.ans3 = ans3
+        #assigns the value of the parameter ans3 to the instance variable ans3
+
         self.ans4 = ans4
+        #assigns the value of the parameter ans4 to the instance variable ans4
+
         self.correct_ans = correct_ans
+        #assigns the value of the parameter correct_ans to the instance variable correct_ans
 
     # Accessors (getters)
     def get_question(self):
-        return self.question
+        return self.question #returns the trivia question
 
-    def get_ans1(self):
+    def get_ans1(self): #returns possible answer #1
         return self.ans1
 
-    def get_ans2(self):
+    def get_ans2(self): #returns possible answer #2
         return self.ans2
 
-    def get_ans3(self):
+    def get_ans3(self): #returns possible answer #3
         return self.ans3
 
-    def get_ans4(self):
+    def get_ans4(self): #returns possible answer #4
         return self.ans4
 
-    def get_correct_ans(self):
+    def get_correct_ans(self): #returns Correct answer
         return self.correct_ans
 
     # Mutators (setters)
-    def set_question(self, question):
+    def set_question(self, question): #sets self.question = question
         self.question = question
 
-    def set_ans1(self, ans1):
+    def set_ans1(self, ans1): #sets self.ans1 = ans1
         self.ans1 = ans1
 
-    def set_ans2(self, ans2):
+    def set_ans2(self, ans2): #sets self.ans2 = ans2
         self.ans2 = ans2
 
-    def set_ans3(self, ans3):
+    def set_ans3(self, ans3): #sets self.ans3 = ans3
         self.ans3 = ans3
 
-    def set_ans4(self, ans4):
+    def set_ans4(self, ans4): #sets self.ans4 = ans4
         self.ans4 = ans4
 
-    def set_correct_ans(self, correct_ans):
+    def set_correct_ans(self, correct_ans): #self.correct_ans = correct_ans
         self.correct_ans = correct_ans
 
-
-question = [
+questions_List = [
     Question("What is Astarions secret?", "He's a Vampire Spawn", "He Hates Gnomes", "He is a Shapechanger ", "He is incapable of love", 1),
     # Answer: He's a Vampire Spawn
 

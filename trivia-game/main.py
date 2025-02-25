@@ -5,9 +5,10 @@
 # SDEV 1200
 #
 
-# # main.py
+# main.py
 
-from questions import Question, questions
+from game_Questions import Question, questions_List
+#Imports from the game_Questions.py file, The Question Class, the list of questions (questions_List)
 
 def play_game():
     #Function that allows two players to answer 5 questions each and determines the winner based on the scores.
@@ -17,7 +18,7 @@ def play_game():
 
     print("Player 1's turn:")   #Prints "Player 1's turn:
     for i in range(5):          #Sets the range of questions asked to five
-        question = questions[i] #Changes the question with each iteration of the loop
+        question = questions_List[i] #Changes the question with each iteration of the loop
 
         print(f"Q{i+1}) {question.get_question()}") #The trivia question is embedded
         #i+1 makes the question number start from 1 instead of 0
@@ -33,7 +34,7 @@ def play_game():
 
     print("Player 2's turn:")   #prints "Player 2's turn:
     for i in range(5, 10):      #Sets the range of questions asked to 10
-        question = questions[i] #Changes the question with each iteration of the loop
+        question = questions_List[i] #Changes the question with each iteration of the loop
 
         print(f"Q{i-4}: {question.get_question()}")
 
@@ -50,13 +51,13 @@ def play_game():
     print(f"Player 2 scored: {player2_score}") #Prints Player 2's Score
 
     if player1_score > player2_score: #Determines if Player 1's Score is greater than Player 2's Score
-        print("Player 1 wins!") #if so, Prints "Player 1 wins"
+        print("Player 1 wins! Astarion Appproves ;)") #if so, Prints "Player 1 wins"
 
     elif player2_score > player1_score: #Determines if Player 1's Score is less than Player 2's Score
-        print("Player 2 wins!") #if so, Prints "Player 2 wins"
+        print("Player 2 wins! Astarion Appproves ;)") #if so, Prints "Player 2 wins"
 
     else:
-        print("It's a tie!") #if neither condition is met, Prints "it's a tie"
+        print("It's a tie! Play Again to gain Astarions Approval") #if neither condition is met, Prints "it's a tie"
 
 # Start the game
 play_game()
