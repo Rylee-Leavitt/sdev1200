@@ -5,25 +5,25 @@
 # SDEV 1200
 #
 
-# main.py
-from production_Workers import Production_Worker
+# employee.py
+class Employee:
+    def __init__(self, name, number): #initializes employee name and number
+        self.__name = name 
+        #assigns the value of the parameter self.__name to the instance variable name
 
-def main():
-    # Get employee information from user
-    name = input("Enter the employee's name: ")
-    number = input("Enter the employee's number: ")
-    shift = int(input("Enter the shift number (1 for day, 2 for night): "))
-    pay_rate = float(input("Enter the hourly pay rate: "))
+        self.__number = number
+        #assigns the value of the parameter self.__number to the instance variable number
 
-    # Create an instance of ProductionWorker
-    worker = Production_Worker(name, number, shift, pay_rate)
+    # Accessor methods
+    def get_name(self): #returns the employee name
+        return self.__name
 
-    # Display the employee information
-    print("\nEmployee Information:")
-    print("Name:", worker.get_name())
-    print("Number:", worker.get_number())
-    print("Shift:", "Day" if worker.get_shift() == 1 else "Night")
-    print("Hourly Pay Rate: $", format(worker.get_pay_rate(), ".2f"), sep="")
+    def get_number(self): #returns the employee number
+        return self.__number
 
-if __name__ == "__main__":
-    main()
+    # Mutator methods
+    def set_name(self, name): #sets self._name = name
+        self.__name = name
+
+    def set_number(self, number):#sets self._number = number
+        self.__number = number
