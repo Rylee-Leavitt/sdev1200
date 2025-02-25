@@ -17,6 +17,7 @@ def play_game():
     player2_score = 0 #initializes Player 's Score
 
     print("Player 1's turn:")   #Prints "Player 1's turn:
+    print("Please Choose an answer between 1-4")  
     for i in range(5):          #Sets the range of questions asked to five
         question = questions_List[i] #Changes the question with each iteration of the loop
 
@@ -32,7 +33,8 @@ def play_game():
         if answer == question.get_correct_ans(): #determines if the players input is the same as the answer
             player1_score += 1 #if input == answer, Player 1 gets a point
 
-    print("Player 2's turn:")   #prints "Player 2's turn:
+    print("Player 2's turn:")   #prints "Player 2's turn:"
+    print("Please Choose an answer between 1-4")  
     for i in range(5, 10):      #Sets the range of questions asked to 10
         question = questions_List[i] #Changes the question with each iteration of the loop
 
