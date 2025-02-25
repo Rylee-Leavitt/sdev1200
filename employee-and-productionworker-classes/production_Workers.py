@@ -5,25 +5,33 @@
 # SDEV 1200
 #
 
-# main.py
-from production_Workers import Production_Worker
+# production_Worker.py
 
-def main():
-    # Get employee information from user
-    name = input("Enter the employee's name: ")
-    number = input("Enter the employee's number: ")
-    shift = int(input("Enter the shift number (1 for day, 2 for night): "))
-    pay_rate = float(input("Enter the hourly pay rate: "))
+from employee import Employee
 
-    # Create an instance of ProductionWorker
-    worker = Production_Worker(name, number, shift, pay_rate)
+class Production_Worker(Employee): #Defines the Production_Worker class with the parameter of employee
 
-    # Display the employee information
-    print("\nEmployee Information:")
-    print("Name:", worker.get_name())
-    print("Number:", worker.get_number())
-    print("Shift:", "Day" if worker.get_shift() == 1 else "Night")
-    print("Hourly Pay Rate: $", format(worker.get_pay_rate(), ".2f"), sep="")
+    def __init__(self, name, number, shift, pay_rate): #initializes the value 
+        super().__init__(name, number)
+        #superclass (Employee). 
+        #allows the subclass (ProductionWorker) to inherit and properly initialize the attributes of the superclass.
 
-if __name__ == "__main__":
-    main()
+        self.__shift = shift
+        #assigns the value of the parameter self.__shift to the instance variable shift
+
+        self.__pay_rate = pay_rate
+        #assigns the value of the parameter self.__pay_rate to the instance variable pay_rate
+
+    # Accessor methods
+    def get_shift(self): #returns the employee shift
+        return self.__shift
+
+    def get_pay_rate(self): #returns the employee pay rate
+        return self.__pay_rate
+
+    # Mutator methods
+    def set_shift(self, shift): #sets self.__shift = shift
+        self.__shift = shift
+
+    def set_pay_rate(self, pay_rate): #sets self.__pay_rate = pay_rate
+        self.__pay_rate = pay_rate
