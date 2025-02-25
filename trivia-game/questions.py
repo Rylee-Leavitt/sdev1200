@@ -9,6 +9,8 @@
 
 class Question:
     def __init__(self, question, ans1, ans2, ans3, ans4, correct_ans):
+        #__init__ initializes the attributes of the Question object with the provided values.
+        
         self.question = question
         self.ans1 = ans1
         self.ans2 = ans2
@@ -55,7 +57,7 @@ class Question:
         self.correct_ans = correct_ans
 
 
-questions = [
+question = [
     Question("What is Astarions secret?", "He's a Vampire Spawn", "He Hates Gnomes", "He is a Shapechanger ", "He is incapable of love", 1),
     # Answer: He's a Vampire Spawn
 
