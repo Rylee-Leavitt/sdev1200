@@ -13,9 +13,9 @@ from customer import Customer
 def main():
     # Create an instance of the Customer class
     customer = Customer(
-        name="Alice Johnson",
-        address="123 Maple Street, Springfield",
-        telephone="555-1234",
+        name="Astarion Ancunin",
+        address="Lower City, Baldur's Gate",
+        telephone="666-6666",
         customer_number=1001,
         on_mailing_list=True
     )
