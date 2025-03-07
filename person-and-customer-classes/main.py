@@ -1,29 +1,28 @@
 #
-# Name
-# Date
+# Rylee Leavitt
+# 3/6/25
 # Person and Customer Classes Programming Project
 # SDEV 1200
 #
 
 # Use comments liberally throughout the program.
+# Import the Customer class
+from customer import Customer
 
-import person
-
-# Main function
+# Demonstration program
 def main():
-    # Get data attributes from the user
-    name = input("Enter the customer's name: ")
-    address = input("Enter the customer's address: ")
-    telephone = input("Enter the customer's telephone number: ")
-    customer_number = input("Enter the customer's number: ")
-    on_mailing_list = input("Is the customer on the mailing list? (yes/no): ").lower() == 'yes'
+    # Create an instance of the Customer class
+    customer = Customer(
+        name="Alice Johnson",
+        address="123 Maple Street, Springfield",
+        telephone="555-1234",
+        customer_number=1001,
+        on_mailing_list=True
+    )
 
-    # Create an instance of Customer
-    customer = Customer(name, address, telephone, customer_number, on_mailing_list)
-    
-    # Display information
-    print(customer.display())
+    # Display the customer details
+    print(customer)
 
-# Call the main function
+
 if __name__ == "__main__":
     main()
