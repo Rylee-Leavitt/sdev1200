@@ -23,6 +23,5 @@ def main():
     # Display the customer details
     print(customer)
 
-
 if __name__ == "__main__":
     main()
