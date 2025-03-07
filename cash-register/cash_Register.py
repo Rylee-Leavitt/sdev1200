@@ -10,37 +10,32 @@
 #From retail.py
 from retail import RetailItem
 
-class CashRegister: 
-    #CashRegister Class stores store RetailItem objects
+# CashRegister.py
+# Defines the CashRegister class
+
+class CashRegister:
+    # Defines a class named CashRegister to manage purchased items
 
     def __init__(self):
-        #Initializes the CashRegister object with an empty list of items.
-
+        # Initializes an empty list to hold RetailItem objects
         self.items = []
 
-    def purchase_item(self, item):
-        #purchase_item: Adds a RetailItem object to the items list.
-
-        self.items.append(item)
+    def purchase_item(self, retail_item):
+        # Adds a RetailItem object to the list of purchased items
+        self.items.append(retail_item)
 
     def get_total(self):
-        #get_total: Calculates and returns the total price of all the items in the items list.
-
-        total = sum(item.price for item in self.items) 
-        #Calculates the total price of all the items in the items list.
-
-        return total 
-        #returns the total price of all the items in the items list.
+        # Calculates the total price of all purchased items
+        return sum(item.price for item in self.items)
 
     def show_items(self):
-        #Displays the description, units, and price of each item
-        register.show_items()
-        
-        for item in self.items:
-            print(f"Description: {item.description}, Units: {item.units}, Price: ${item.price:.2f}")
-            # Returns Ex) 
+        # Displays all the items in the cash register
+        if not self.items:
+            print("No items have been added to the cart.")
+        else:
+            for item in self.items:
+                print(item)
 
     def clear(self):
+        # Clears the list of purchased items
         self.items = []
-
-        # Clear the cash register
