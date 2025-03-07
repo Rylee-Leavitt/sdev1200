@@ -1,29 +1,23 @@
-#
-# Name
-# Date
+# 
+#Rylee Leavitt
+# 3/6/25
 # Person and Customer Classes Programming Project
 # SDEV 1200
 #
-
 # Use comments liberally throughout the program.
 
-import person
+# Import the Person class
+from person import Person
 
-# Main function
-def main():
-    # Get data attributes from the user
-    name = input("Enter the customer's name: ")
-    address = input("Enter the customer's address: ")
-    telephone = input("Enter the customer's telephone number: ")
-    customer_number = input("Enter the customer's number: ")
-    on_mailing_list = input("Is the customer on the mailing list? (yes/no): ").lower() == 'yes'
+# Define the Customer class as a subclass of Person
+class Customer(Person):
+    def __init__(self, name, address, telephone, customer_number, on_mailing_list):
+        # Initialize attributes from the Person class
+        super().__init__(name, address, telephone)
+        self.customer_number = customer_number
+        self.on_mailing_list = on_mailing_list
 
-    # Create an instance of Customer
-    customer = Customer(name, address, telephone, customer_number, on_mailing_list)
-    
-    # Display information
-    print(customer.display())
-
-# Call the main function
-if __name__ == "__main__":
-    main()
+    def __str__(self):
+        # Include customer-specific details in the string representation
+        mailing_list_status = "Yes" if self.on_mailing_list else "No"
+        return super().__str__() + f"\nCustomer Number: {self.customer_number}\nOn Mailing List: {mailing_list_status}"
