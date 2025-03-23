@@ -94,4 +94,4 @@ while True:
         print("Invalid input. Please enter 'plant', 'flower', or '-1'.")
 
 # Print all elements in the listprint_list(my_garden)
-print_list(my_garden) #Output Results
+print_list(my_garden) # Output Results
