@@ -1,9 +1,9 @@
 #
-# Name
-# Date
+# Rylee Leavitt
+# 4/28/25
 # Joe's Automotive Programming Project
 # SDEV 1200
-#
+
 # Use comments liberally throughout the program.  
 # The code below was auto-generated. 
 # Delete/adjust unnecessary code.
