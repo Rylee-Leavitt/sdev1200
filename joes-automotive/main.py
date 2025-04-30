@@ -8,15 +8,83 @@
 # The code below was auto-generated. 
 # Delete/adjust unnecessary code.
 
-import tkinter as tk
+import tkinter
+import tkinter.messagebox
 
-window = tk.Tk()
-window.title("Joe's Automotive")
-window.geometry("300x300")
+class AutoGUI:
+    def __init__(self):
+        #create main window
+        self.main_window = tkinter.tk()
 
-hello = tk.Label(text="Hello world!")
-hello.pack()
-button = tk.Button(text="Click me!")
-button.pack()
+        #create frames
+        self.top_frame = tkinter(self.main_window)
+        self.bottom_frame = tkinter (self.main_window)
 
-tk.mainloop()
+        #create variables to use with the check buttons
+        self.cb_oil_var = tkinter.IntVar()
+        self.cb_lube_var = tkinter.IntVar()
+        self.cb_radiator_var = tkinter.IntVar()
+        self.cb_trans_var = tkinter.IntVar()
+        self.cb_inspection_var = tkinter.IntVar()
+        self.cb_muffler_var = tkinter.IntVar()
+        self.cb_tire_var = tkinter.IntVar()
+
+        #set the variables to 0
+        self.cb_oil_var.set (0)
+        self.cb_lube_var.set (0)
+        self.cb_radiator_var.set (0)
+        self.cb_trans_var.set (0)
+        self.cb_inspection_var.set (0)
+        self.cb_muffler_var.set (0)
+        self.cb_tire_var.set (0)
+
+        #create the checkbuttons in top frame
+        self.cb1 = tkinter.Checkbutton(self.top_frame,
+                    text= 'Oil Change - $30.00',
+                    variable= self.cb_oil_var)
+        
+        self.cb2 = tkinter.Checkbutton(self.top_frame,
+                    text= 'Lube Job - $20.00',
+                    variable= self.cb_lube_var)
+        
+        self.cb3 = tkinter.Checkbutton(self.top_frame,
+                    text= 'Radiator Flush - $40.00',
+                    variable= self.cb_radiator_var)
+        
+        self.cb4 = tkinter.Checkbutton(self.top_frame,
+                    text= 'Transmission Flush - $100.00',
+                    variable= self.cb_trans_var)
+        
+        self.cb5 = tkinter.Checkbutton(self.top_frame,
+                    text= 'Inspection - $35.00',
+                    variable= self.cb_inspection_var)
+        
+        self.cb6 = tkinter.Checkbutton(self.top_frame,
+                    text= 'Muffler replacement - $200.00',
+                    variable= self.cb_muffler_var)
+        
+        self.cb7 = tkinter.Checkbutton(self.top_frame,
+                    text= 'Tire rotation - $20.00',
+                    variable= self.cb_tire_var)
+        
+        #packing the check buttons
+        self.cb1.pack()
+        self.cb2.pack()
+        self.cb3.pack()
+        self.cb4.pack()
+        self.cb5.pack()
+        self.cb6.pack()
+        self.cb7.pack()
+
+        #create two buttons in the bottom frame
+        self.display_button = tkinter.Button(self.bottom_frame,
+                            text= 'Display Charges',
+                            command= self.calculate)
+        
+        self.quit_button = tkinter.Button(self.bottom_frame,
+                            text= 'Quit',
+                            command= self.main_window.destroy)
+
+        #pack the widgets in the bottom frame
+        self.display_button.pack(side = 'left')
+        self.quit_button.pack(side = 'left')
