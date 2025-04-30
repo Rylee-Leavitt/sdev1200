@@ -88,3 +88,44 @@ class AutoGUI:
         #pack the widgets in the bottom frame
         self.display_button.pack(side = 'left')
         self.quit_button.pack(side = 'left')
+
+        #pack the frames
+        self.top_frame.pack()
+        self.bottom_frame.pack()
+
+        #enter the tkinter main loop
+        tkinter.mainloop()
+
+    #define the show infor function
+    def calculate(self):
+        self.total = 0.0
+
+        #determine the total charges based on the buttons pressed
+        if self.cb_oil_var.get() == 1:
+            self.total += 30.0
+
+        if self.cb_lube_var.get() == 1:
+            self.total += 20.0
+        
+        if self.cb_radiator_var.get() == 1:
+            self.total += 40.0
+        
+        if self.cb_trans_var.get() == 1:
+            self.total += 100.0
+
+        if self.cb_inspection_var.get() == 1:
+            self.total += 35.0
+        
+        if self.cb_muffler_var.get() == 1:
+            self.total += 200.0
+        
+        if self.cb_tire_var.get() == 1:
+            self.total += 20.0
+
+        #Display message box
+        tkinter.messagebox.showinfo('Total Charges',
+                        f'Your Total Charges - ${self.total:,.2f}')
+
+#create an instace of auto GUI
+if __name__ == '__main__':
+    auto = AutoGUI()
