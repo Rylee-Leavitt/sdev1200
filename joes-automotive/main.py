@@ -14,11 +14,11 @@ import tkinter.messagebox
 class AutoGUI:
     def __init__(self):
         #create main window
-        self.main_window = tkinter.tk()
+        self.main_window = tkinter.Tk()
 
         #create frames
-        self.top_frame = tkinter(self.main_window)
-        self.bottom_frame = tkinter (self.main_window)
+        self.top_frame = tkinter.Frame(self.main_window)
+        self.bottom_frame = tkinter.Frame(self.main_window)
 
         #create variables to use with the check buttons
         self.cb_oil_var = tkinter.IntVar()
