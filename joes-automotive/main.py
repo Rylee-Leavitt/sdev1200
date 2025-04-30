@@ -15,6 +15,7 @@ class AutoGUI:
     def __init__(self):
         #create main window
         self.main_window = tkinter.Tk()
+        self.main_window.title("Joe's Automotive Bill")  # Set the new title here
 
         #create frames
         self.top_frame = tkinter.Frame(self.main_window)
