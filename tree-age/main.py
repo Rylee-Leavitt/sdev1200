@@ -24,7 +24,13 @@ def draw_growth_rings(canvas, center_x, center_y, max_radius, num_rings):
         # Draw the ring using an oval shape
         canvas.create_oval(center_x - radius, center_y - radius,
                            center_x + radius, center_y + radius, outline="green", width=4)
-        
+        #Since the oval is defined by a bounding box, if radius is the same in both directions, 
+        #this will produce a perfect circle centered at (center_x, center_y).
+            #(center_x - radius, center_y - radius): These are the coordinates of the top-left corner of the bounding box.
+            #(center_x + radius, center_y + radius): These are the coordinates of the bottom-right corner of the bounding box.
+            #outline="green": Sets the outline color of the oval to green.
+            #width=4: Sets the thickness of the oval's outline to 4 pixels.
+
         # Label the ring with its corresponding year
         canvas.create_text(center_x, center_y - radius + 10, text=str(i+1), fill="black",
                            font=("Arial", 12))
