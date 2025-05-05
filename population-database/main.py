@@ -26,9 +26,6 @@ def main():
         choice = get_menu_choice()
         execute_choice(choice, cur)
 
-        # close the connection
-        conn.close()
-
 # the display_menu function diaplays a menu
 def display_menu():
     print('Menu')
@@ -55,6 +52,7 @@ def get_menu_choice ():
         
 # preform the action that the user selected
 def execute_choice (choice,cur):
+        print(f'Executing choice {choice}')
         if choice == 1:
             cities_sorted_ascending(cur)
 
@@ -189,13 +187,15 @@ def lowest_population(cur):
 # The display_results function displays the values in
 # the results of a SELECT statement. It is assumed that the results contain the 
 # CityName and Population columns, in that order.
+
 def display_results(results):
-    print(f'("city":20)(Population)')
+    print(f"{'City':<20}{'Population':>11}") # Align city left, population right
+    print('*' * 31)  # Separator for clarity
 
     for row in results:
-        print(f'(row [0]:20)(row [1]:,.0f)')
+        print(f"{row[0]:20} {row[1]:,.0f}")
     print()
 
 # Execute the main function
 if __name__ == '__main__':
-    main() 
+    main()
