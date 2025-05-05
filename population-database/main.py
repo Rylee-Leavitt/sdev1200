@@ -153,7 +153,7 @@ def highest_population(cur):
     cur.execute ('SELECT MAX(Population) FROM Cities')
 
     # Fetch the results
-    max_results = cur.fetchone
+    max_results = cur.fetchone()
 
     # Now, get the entire row that contains that population
     cur.execute ('''SELECT CityName, Population FROM Cities
@@ -163,7 +163,7 @@ def highest_population(cur):
     results = cur.fetchone()
 
     # Display the results
-    print(f'\n(results[0]) Has The Highest Population: (results[1]:,.0f)\n')
+    print(f"{results[0]} has the highest population: {results[1]:,.0f}")
 
 # Display the city with the lowest population.
 def lowest_population(cur):
@@ -172,7 +172,7 @@ def lowest_population(cur):
     cur.execute ('SELECT MIN(Population) FROM Cities')
 
     # Fetch the results
-    min_results = cur.fetchone
+    min_results = cur.fetchone()
 
     # Now, get the entire row that contains that population
     cur.execute ('''SELECT CityName, Population FROM Cities
@@ -182,7 +182,7 @@ def lowest_population(cur):
     results = cur.fetchone()
 
     # Display tyhe results
-    print(f'\n(results[0]) Has The Lowest Population: (results[1]:,.0f)\n')
+    print(f"{results[0]} has the lowest population: {results[1]:,.0f}")
 
 # The display_results function displays the values in
 # the results of a SELECT statement. It is assumed that the results contain the 
