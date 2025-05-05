@@ -135,7 +135,7 @@ def total_population(cur):
     results = cur.fetchone()
 
     # Display the results
-    print(f'\n Total Population: (results[0]:,.0f)\n')
+    print(f"Total Population: {results[0]:,.0f}")
 
 # Display the average population of all the cities.
 def average_population(cur):
@@ -147,7 +147,7 @@ def average_population(cur):
     results = cur.fetchone()
 
     # Display the results
-    print(f'\n Average Population: (results[0]:,.0f)\n')
+    print(f"Average Population: {results[0]:,.0f}")
 
 # Display the city with the highest population.
 def highest_population(cur):
