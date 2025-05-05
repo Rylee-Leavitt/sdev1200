@@ -26,6 +26,9 @@ def main():
         choice = get_menu_choice()
         execute_choice(choice, cur)
 
+    if choice == 8:
+        print("Goodbye! Have a great day! 👋")
+
 # the display_menu function diaplays a menu
 def display_menu():
     print('Menu')
