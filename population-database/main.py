@@ -42,8 +42,8 @@ def display_menu():
     print ('7.) Display the city with the lowest population.')
     print ('8.) EXIT')
 
-    # the get_menu_choice function displays the menu and gets the user's choice
-    def get_menu_choice ():
+# the get_menu_choice function displays the menu and gets the user's choice
+def get_menu_choice ():
         display_menu()
         choice = int(input('Enter your choice (using the corresponding number): '))
 
@@ -53,8 +53,8 @@ def display_menu():
             
         return choice
         
-    # preform the action that the user selected
-    def execute_choice (choice,cur):
+# preform the action that the user selected
+def execute_choice (choice,cur):
         if choice == 1:
             cities_sorted_ascending(cur)
 
