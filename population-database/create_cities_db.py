@@ -1,6 +1,6 @@
 #
-# Name
-# Date
+# Rylee Leavitt
+# 5/4/25
 # Population Database Programming Project
 # SDEV 1200
 #
